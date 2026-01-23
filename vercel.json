@@ -2,4 +2,7 @@
   "rewrites": [
     { "source": "/", "destination": "/Html/index.html" }
   ]
+  "rewrites": [
+    { "source": "/", "destination": "/Html/partnerships.html" }
+  ]
 }
