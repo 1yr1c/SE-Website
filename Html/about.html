@@ -17,6 +17,7 @@
 
     
 
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="events.html">Events</a>
@@ -162,14 +163,17 @@
 
 <script src="../JavaScript/scroll.js"></script>
 <script src="../JavaScript/bg-scroll.js"></script>
+
 <script>
-  const toggle = document.querySelector('.nav-toggle');
-  const links  = document.querySelector('.nav-links');
-  toggle.addEventListener('click', () => {
-    const open = links.classList.toggle('open');
-    toggle.classList.toggle('open', open);
-    toggle.setAttribute('aria-expanded', open);
-  });
+  var toggle = document.querySelector(".nav-toggle");
+  var links = document.querySelector(".nav-links");
+  if (toggle && links) {
+    toggle.addEventListener("click", function() {
+      var open = links.classList.toggle("open");
+      toggle.classList.toggle("open", open);
+      toggle.setAttribute("aria-expanded", open);
+    });
+  }
 </script>
 </body>
 </html>
