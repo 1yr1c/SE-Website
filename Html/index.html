@@ -7,58 +7,53 @@
   <link rel="stylesheet" href="../Css/style.css">
 </head>
 <body>
-  <div class="bg-layer"></div>
-
 
 <nav>
   <div class="nav-inner">
-    <a class="brand" href="/">
+    <a class="brand" href="index.html">
       <img src="../Images/logo.jpeg" alt="Stirling Entrepreneurs logo">
       <span>Stirling Entrepreneurs</span>
     </a>
 
-    <div>
-      <a href="/" class="active">Home</a>
+  
+
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
       <a href="events.html">Events</a>
       <a href="about.html">About</a>
       <a href="partnerships.html">Partnerships</a>
-      <a href="contact.html" class="nav-cta">Join</a>
-
+      <a href="contact.html" class="nav-join">Join</a>
     </div>
   </div>
 </nav>
 
-
 <div class="container">
 
   <section class="section reveal hero">
-  <div>
-    <h1>Build, Connect,<br>Launch at Stirling</h1>
-    <p>
-      A student-led society at the University of Stirling for founders, builders,
-      and ambitious thinkers. Come along to events, meet collaborators,
-      and turn ideas into something real.
-    </p>
-
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="contact.html">Join the Society</a>
-      <a class="btn btn-secondary" href="events.html">View Events</a>
+    <div>
+      <h1>Build, Connect,<br>Launch at Stirling</h1>
+      <p>
+        A student-led society at the University of Stirling for founders, builders,
+        and ambitious thinkers. Come along to events, meet collaborators,
+        and turn ideas into something real.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="contact.html">Join the Society</a>
+        <a class="btn btn-secondary" href="events.html">View Events</a>
+      </div>
     </div>
-  </div>
 
-  <div class="logo-card">
-    <img src="../Images/image.png" alt="Stirling Entrepreneurs logo">
-  </div>
-</section>
-
+    <div class="logo-card">
+      <img src="../Images/image.png" alt="Stirling Entrepreneurs hero visual">
+    </div>
+  </section>
 
   <section class="section reveal">
     <h2>What we do</h2>
     <p>
       We create a space on campus where students can explore entrepreneurship in a practical, friendly way.
-      You don’t need a startup idea, just curiosity and a willingness to learn.
+      You don't need a startup idea, just curiosity and a willingness to learn.
     </p>
-
     <div class="cards">
       <div class="card">
         <span class="kicker">Events</span>
@@ -81,14 +76,13 @@
   <section class="section reveal">
     <h2>Who should join?</h2>
     <p>
-      Anyone at Stirling who wants to learn, build, or meet ambitious people, from computing and business
+      Anyone at Stirling who wants to learn, build, or meet ambitious people — from computing and business
       to design, sports, science, and arts. Entrepreneurship is a mindset, not a degree.
     </p>
-
     <div class="list">
       <div class="list-item">
         <strong>Complete beginner</strong>
-        <p class="small">Start with socials and beginner-friendly workshops, we’ll guide you.</p>
+        <p class="small">Start with socials and beginner-friendly workshops, we'll guide you.</p>
       </div>
       <div class="list-item">
         <strong>Already building</strong>
@@ -107,11 +101,10 @@
       Join the society to get event updates, meet members, and access opportunities.
       We also welcome guest speakers and partnerships.
     </p>
-
     <div class="cards">
       <div class="card">
         <h3>Students</h3>
-        <p>Join, attend events, and bring a friend, everyone is welcome.</p>
+        <p>Join, attend events, and bring a friend — everyone is welcome.</p>
       </div>
       <div class="card">
         <h3>Founders &amp; alumni</h3>
@@ -132,8 +125,14 @@
 
 <script src="../JavaScript/scroll.js"></script>
 <script src="../JavaScript/bg-scroll.js"></script>
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const links  = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open);
+  });
+</script>
 </body>
-
 </html>
-
-
