@@ -7,26 +7,23 @@
   <link rel="stylesheet" href="../Css/style.css">
 </head>
 <body>
-  <div class="bg-layer"></div>
-
 
 <nav>
   <div class="nav-inner">
-    <a class="brand" href="/">
+    <a class="brand" href="index.html">
       <img src="../Images/logo.jpeg" alt="Stirling Entrepreneurs logo">
       <span>Stirling Entrepreneurs</span>
     </a>
 
-    <div>
-      <a href="/">Home</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
       <a href="events.html">Events</a>
       <a href="about.html">About</a>
       <a href="partnerships.html" class="active">Partnerships</a>
-      <a href="contact.html" class="nav-cta">Join</a>
+      <a href="contact.html" class="nav-join">Join</a>
     </div>
   </div>
 </nav>
-
 
 <div class="container">
 
@@ -44,10 +41,7 @@
 
   <section class="section reveal" id="packages">
     <h2>How partners can get involved</h2>
-    <p>
-      The goal is to make it easy for a potential sponsors to say “yes”.
-    </p>
-
+    <p>The goal is to make it easy for a potential sponsor to say "yes".</p>
     <div class="cards">
       <div class="card">
         <span class="kicker">Speaking</span>
@@ -84,7 +78,6 @@
 
   <section class="section reveal">
     <h2>What partners get</h2>
-
     <div class="cards">
       <div class="card">
         <h3>Brand visibility</h3>
@@ -99,7 +92,6 @@
         <p>Support innovation on campus by helping students develop real-world skills.</p>
       </div>
     </div>
-
     <div class="list">
       <div class="list-item">
         <strong>We keep it simple</strong>
@@ -113,9 +105,8 @@
   </section>
 
   <section class="section reveal">
-    <h2>Featured partners </h2>
+    <h2>Featured partners</h2>
     <p>Welcome to our current partners:</p>
-
     <div class="logo-grid">
       <div class="logo-tile">
         <span>Collabor8</span>
@@ -152,8 +143,14 @@
 
 <script src="../JavaScript/scroll.js"></script>
 <script src="../JavaScript/bg-scroll.js"></script>
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const links  = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open);
+  });
+</script>
 </body>
-
 </html>
-
-
